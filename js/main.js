@@ -14,3 +14,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       .scrollIntoView({ behavior: "smooth" });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.mobile-menu-button');
+  const menu = document.querySelector('.menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+  }
+});
