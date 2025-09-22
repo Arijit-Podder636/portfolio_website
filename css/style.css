@@ -352,3 +352,10 @@ footer a {
 .project-img:hover {
   transform: scale(1.02);
 }
+
+@media (max-width: 720px) {
+  nav .menu { display: none; }
+  .mobile-menu-button { display: block; }
+  .hero { padding: 40px 20px; }
+}
+
