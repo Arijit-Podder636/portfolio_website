@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">My Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Arijit Podder</span></h1>
+      <p>Aspiring Web Developer | Building responsive and interactive web applications</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <!-- Optional Resume Button -->
+      <!-- <a href="resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a> -->
+    </div>
+  </section>
+
+  <!-- Floating code particles -->
+  <div class="code-particles">
+    <span class="code-symbol">&lt;/&gt;</span>
+    <span class="code-symbol">{ }</span>
+    <span class="code-symbol">;</span>
+    <span class="code-symbol">()</span>
+    <span class="code-symbol">=</span>
+    <span class="code-symbol">const</span>
+  </div>
+
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate web developer who loves building creative and responsive websites. 
+      Skilled in HTML, CSS, JavaScript, PHP, and MySQL. Always eager to learn and take on new challenges.
+    </p>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+<section id="projects" class="section bg-light">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-grid" style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+      <!-- Project A -->
+      <div class="project-card" style="border: 1px solid #ccc; border-radius: 10px; overflow: hidden; width: 300px;">
+        <img src="images/bookstore.jpg" alt="Online Bookstore Application" class="project-img" style="width:100%; height:auto;">
+        <div class="card-content" style="padding: 15px;">
+          <h3>Online Bookstore Application</h3>
+          <p>A web-based application with Admin Panel and CRUD features to manage books and orders.</p>
+          <a href="#" class="btn btn-small" style="display: inline-block; padding: 8px 12px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">View Demo</a>
+        </div>
+      </div>
+
+      <!-- Project B -->
+      <div class="project-card" style="border: 1px solid #ccc; border-radius: 10px; overflow: hidden; width: 300px;">
+        <img src="images/elearning.jpg" alt="E-Learning Portal" class="project-img" style="width:100%; height:auto;">
+        <div class="card-content" style="padding: 15px;">
+          <h3>Capstone Project: E-Learning Portal</h3>
+          <p>An online learning platform prototype that provides interactive courses and progress tracking.</p>
+          <a href="#" class="btn btn-small" style="display: inline-block; padding: 8px 12px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">View Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="section contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your Email" required>
+    
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+    Your message has been sent. Thank you for reaching out!
+  </p>
+</section>
+
+
+  <!-- ===== Multimedia Section ===== -->
+<section id="multimedia" class="section">
+  <h2>Multimedia (Demo)</h2>
+  <div class="media-grid">
+    <iframe width="320" height="180" 
+      src="https://www.youtube.com/embed/BsDoLVMnmZs?si=9YZP1tFcvFAjxnVs" 
+      title="YouTube Video" 
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Arijit Podder | 
+      <a href="https://github.com/Arijit-Podder636" target="_blank">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/arijit-podder-3a6668322" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+  <script src="js/script.js"></script>
+
+   <!-- ===== Contact Form Script ===== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent page reload
+
+      // Show success message
+      successMessage.style.display = "block";
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+
+      // Clear the form fields
+      form.reset();
+    });
+    });
+  </script>
+
+  <!-- Image Overlay for double-click preview -->
+  <div id="imgOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+      background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000; cursor: zoom-out;">
+    <img id="overlayImg" src="" alt="Project Image" style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 20px #000;">
+  </div>
+
+  <script>
+  const projectImages = document.querySelectorAll('.project-img');
+  const imgOverlay = document.getElementById('imgOverlay');
+  const overlayImg = document.getElementById('overlayImg');
+
+  projectImages.forEach(img => {
+    img.addEventListener('dblclick', () => {
+      overlayImg.src = img.src; // set overlay image source
+      imgOverlay.style.display = 'flex'; // show overlay
+    });
+  });
+
+  // Close overlay when clicked anywhere
+  imgOverlay.addEventListener('click', () => {
+    imgOverlay.style.display = 'none';
+    overlayImg.src = '';
+  });
+</script>
+
+
+</body>
+</html>
