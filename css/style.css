@@ -359,3 +359,28 @@ footer a {
   .hero { padding: 40px 20px; }
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;              /* initially invisible */
+  transition: opacity 0.5s, transform 0.3s; /* fade + hover animation */
+  z-index: 1000;
+}
+
+/* Fade in/out */
+#backToTop.show {
+  opacity: 1;
+}
+
+/* Hover effect */
+#backToTop:hover {
+  transform: scale(1.1);
+}
+
